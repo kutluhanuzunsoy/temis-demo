@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEMIS | Yapay Zeka Destekli Hukuk Asistanı</title>
+    <title>TEMIS | AI Powered Legal Assistant</title>
     <link rel="stylesheet" href="assets/css/style.css?v=2.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -12,11 +12,18 @@
         <div class="container">
             <nav>
                 <a href="#" class="logo">TEMIS</a>
-                <ul class="nav-links">
-                    <li><a href="#ekip">Ekip</a></li>
-                    <li><a href="#ozellikler">Özellikler</a></li>
-                    <li><a href="#watch-demo">Demo İzle</a></li>
-                </ul>
+                <div style="display: flex; align-items: center; flex-wrap: wrap;">
+                    <ul class="nav-links">
+                        <li><a href="#team" data-i18n="navTeam">Team</a></li>
+                        <li><a href="#features" data-i18n="navFeatures">Features</a></li>
+                        <li><a href="#watch-demo" data-i18n="navDemo">Watch Demo</a></li>
+                    </ul>
+                    <div class="lang-switch">
+                        <button class="lang-btn active" onclick="changeLanguage('en')" id="btn-en">EN</button>
+                        <span>|</span>
+                        <button class="lang-btn" onclick="changeLanguage('tr')" id="btn-tr">TR</button>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -24,25 +31,25 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1>Hukukta Yapay Zeka Devrimi</h1>
-                <p>Yargıtay kararları, mevzuatlar ve içtihatlar üzerinde çalışan, RAG tabanlı akıllı hukuk asistanı. Avukatlar için saniyeler içinde referanslı, güvenilir yanıtlar üretir.</p>
-                <a href="#watch-demo" class="btn">Demoyu İzle</a>
+                <h1 data-i18n="heroTitle">AI Revolution in Law</h1>
+                <p data-i18n="heroDesc">A RAG-based smart legal assistant working on Supreme Court decisions, legislation, and case law. Generates referenced, reliable answers for lawyers in seconds.</p>
+                <a href="#watch-demo" class="btn" data-i18n="heroBtn">Watch Demo</a>
             </div>
         </section>
 
-        <section id="ekip" class="section">
+        <section id="team" class="section">
             <div class="container">
-                <h2>Geliştirici Ekibimiz</h2>
+                <h2 data-i18n="teamTitle">Our Development Team</h2>
                 
                 <div class="advisor">
-                    <h3>Proje Danışmanı</h3>
+                    <h3 data-i18n="advisorTitle">Project Advisor</h3>
                     <p><strong>Prof. Dr. İlyas Çiçekli</strong></p>
-                    <p><em>Hacettepe Üniversitesi / Bilgisayar Mühendisliği</em></p>
+                    <p><em data-i18n="advisorUni">Hacettepe University / Computer Engineering</em></p>
                 </div>
 
                 <div class="team-grid">
                     <div class="team-member">
-                        <div class="avatar-placeholder">[FOTO]</div>
+                        <div class="avatar-placeholder" data-i18n="photo">[PHOTO]</div>
                         <h3>Yusuf Demir</h3>
                         <p>AI / RAG Engineer</p>
                         <div class="social-links">
@@ -51,7 +58,7 @@
                         </div>
                     </div>
                     <div class="team-member">
-                        <div class="avatar-placeholder">[FOTO]</div>
+                        <div class="avatar-placeholder" data-i18n="photo">[PHOTO]</div>
                         <h3>Oktay Kaplan</h3>
                         <p>Backend / Frontend Engineer</p>
                         <div class="social-links">
@@ -60,7 +67,7 @@
                         </div>
                     </div>
                     <div class="team-member">
-                        <div class="avatar-placeholder">[FOTO]</div>
+                        <div class="avatar-placeholder" data-i18n="photo">[PHOTO]</div>
                         <h3>Kutluhan Uzunsoy</h3>
                         <p>Backend / Frontend Engineer</p>
                         <div class="social-links">
@@ -72,24 +79,24 @@
             </div>
         </section>
 
-        <section id="ozellikler" class="section">
+        <section id="features" class="section">
             <div class="container">
-                <h2>Öne Çıkan Özellikler</h2>
+                <h2 data-i18n="featuresTitle">Highlighted Features</h2>
                 <div class="features-grid">
                     <div class="feature-card">
                         <i class="fas fa-search"></i>
-                        <h3>Semantik Arama</h3>
-                        <p>Anahtar kelimelere değil, cümlenin ve hukuki problemin anlamına (vektörel arama) göre kararları ve mevzuatları bulur.</p>
+                        <h3 data-i18n="f1Title">Semantic Search</h3>
+                        <p data-i18n="f1Desc">Finds decisions and legislation based on the meaning (vector search) of the legal problem, not just keywords.</p>
                     </div>
                     <div class="feature-card">
                         <i class="fas fa-brain"></i>
-                        <h3>RAG Destekli Yanıtlar</h3>
-                        <p>LLM'in halüsinasyon görmesini engellemek için, cevaplarını her zaman veritabanındaki gerçek hukuki metinlere dayandırır.</p>
+                        <h3 data-i18n="f2Title">RAG-Powered Answers</h3>
+                        <p data-i18n="f2Desc">Bases answers on real legal texts in the database to prevent LLM hallucinations.</p>
                     </div>
                     <div class="feature-card">
                         <i class="fas fa-layer-group"></i>
-                        <h3>Mikroservis Mimarisi</h3>
-                        <p>React, Java Spring Boot ve Python (FastAPI + LangChain) servisleriyle yüksek ölçeklenebilir ve modern altyapı.</p>
+                        <h3 data-i18n="f3Title">Microservice Architecture</h3>
+                        <p data-i18n="f3Desc">Highly scalable and modern infrastructure with React, Java Spring Boot, and Python (FastAPI + LangChain) services.</p>
                     </div>
                 </div>
             </div>
@@ -97,26 +104,26 @@
 
         <section id="watch-demo" class="section">
             <div class="container">
-                <h2>Ekran Görüntüleri & Demo</h2>
+                <h2 data-i18n="demoTitle">Screenshots & Demo</h2>
                 
                 <div class="demo-grid">
                     <div class="screenshot">
                         <div class="screenshot-placeholder">
-                            <span>[EKRAN GÖRÜNTÜSÜ 1]</span>
+                            <span data-i18n="s1Holder">[SCREENSHOT 1]</span>
                         </div>
-                        <p>TEMIS Kullanıcı Arayüzü</p>
+                        <p data-i18n="s1Text">TEMIS User Interface</p>
                     </div>
                     <div class="screenshot">
                         <div class="screenshot-placeholder">
-                            <span>[EKRAN GÖRÜNTÜSÜ 2]</span>
+                            <span data-i18n="s2Holder">[SCREENSHOT 2]</span>
                         </div>
-                        <p>Referanslı Yanıt ve Karar Gösterimi</p>
+                        <p data-i18n="s2Text">Referenced Answer and Decision Display</p>
                     </div>
                 </div>
 
                 <div class="demo-content" style="margin-top: 24px;">
                     <div class="video-container">
-                        <span>[DEMO VİDEOSU YOUTUBE EMBED]</span>
+                        <span data-i18n="videoHolder">[DEMO VIDEO YOUTUBE EMBED]</span>
                     </div>
                 </div>
             </div>
@@ -125,8 +132,92 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 TEMIS Projesi. Tüm hakları saklıdır. Bu yenilikçi bir bitirme projesidir.</p>
+            <p data-i18n="footerText">&copy; 2026 TEMIS Project. All rights reserved. This is an innovative graduation project.</p>
         </div>
     </footer>
+
+    <script>
+        const translations = {
+            en: {
+                navTeam: "Team",
+                navFeatures: "Features",
+                navDemo: "Watch Demo",
+                heroTitle: "AI Revolution in Law",
+                heroDesc: "A RAG-based smart legal assistant working on Supreme Court decisions, legislation, and case law. Generates referenced, reliable answers for lawyers in seconds.",
+                heroBtn: "Watch Demo",
+                teamTitle: "Our Development Team",
+                advisorTitle: "Project Advisor",
+                advisorUni: "Hacettepe University / Computer Engineering",
+                photo: "[PHOTO]",
+                featuresTitle: "Highlighted Features",
+                f1Title: "Semantic Search",
+                f1Desc: "Finds decisions and legislation based on the meaning (vector search) of the legal problem, not just keywords.",
+                f2Title: "RAG-Powered Answers",
+                f2Desc: "Bases answers on real legal texts in the database to prevent LLM hallucinations.",
+                f3Title: "Microservice Architecture",
+                f3Desc: "Highly scalable and modern infrastructure with React, Java Spring Boot, and Python (FastAPI + LangChain) services.",
+                demoTitle: "Screenshots & Demo",
+                s1Holder: "[SCREENSHOT 1]",
+                s1Text: "TEMIS User Interface",
+                s2Holder: "[SCREENSHOT 2]",
+                s2Text: "Referenced Answer and Decision Display",
+                videoHolder: "[DEMO VIDEO YOUTUBE EMBED]",
+                footerText: "&copy; 2026 TEMIS Project. All rights reserved. This is an innovative graduation project."
+            },
+            tr: {
+                navTeam: "Ekip",
+                navFeatures: "Özellikler",
+                navDemo: "Demo İzle",
+                heroTitle: "Hukukta Yapay Zeka Devrimi",
+                heroDesc: "Yargıtay kararları, mevzuatlar ve içtihatlar üzerinde çalışan, RAG tabanlı akıllı hukuk asistanı. Avukatlar için saniyeler içinde referanslı, güvenilir yanıtlar üretir.",
+                heroBtn: "Demoyu İzle",
+                teamTitle: "Geliştirici Ekibimiz",
+                advisorTitle: "Proje Danışmanı",
+                advisorUni: "Hacettepe Üniversitesi / Bilgisayar Mühendisliği",
+                photo: "[FOTO]",
+                featuresTitle: "Öne Çıkan Özellikler",
+                f1Title: "Semantik Arama",
+                f1Desc: "Anahtar kelimelere değil, cümlenin ve hukuki problemin anlamına (vektörel arama) göre kararları ve mevzuatları bulur.",
+                f2Title: "RAG Destekli Yanıtlar",
+                f2Desc: "LLM'in halüsinasyon görmesini engellemek için, cevaplarını her zaman veritabanındaki gerçek hukuki metinlere dayandırır.",
+                f3Title: "Mikroservis Mimarisi",
+                f3Desc: "React, Java Spring Boot ve Python (FastAPI + LangChain) servisleriyle yüksek ölçeklenebilir ve modern altyapı.",
+                demoTitle: "Ekran Görüntüleri & Demo",
+                s1Holder: "[EKRAN GÖRÜNTÜSÜ 1]",
+                s1Text: "TEMIS Kullanıcı Arayüzü",
+                s2Holder: "[EKRAN GÖRÜNTÜSÜ 2]",
+                s2Text: "Referanslı Yanıt ve Karar Gösterimi",
+                videoHolder: "[DEMO VİDEOSU YOUTUBE EMBED]",
+                footerText: "&copy; 2026 TEMIS Projesi. Tüm hakları saklıdır. Bu yenilikçi bir bitirme projesidir."
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.documentElement.lang = lang;
+            
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if(translations[lang][key]) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translations[lang][key];
+                    } else {
+                        element.innerHTML = translations[lang][key];
+                    }
+                }
+            });
+
+            document.getElementById('btn-en').classList.remove('active');
+            document.getElementById('btn-tr').classList.remove('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+
+            localStorage.setItem('temis_lang', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('temis_lang') || 'en';
+            changeLanguage(savedLang);
+        });
+    </script>
 </body>
 </html>
