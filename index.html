@@ -32,7 +32,7 @@
         <section class="hero">
             <div class="container">
                 <h1 data-i18n="heroTitle">AI Revolution in Law</h1>
-                <p data-i18n="heroDesc">A RAG-based smart legal assistant working on Supreme Court decisions, legislation, and case law. Generates referenced, reliable answers for lawyers in seconds.</p>
+                <p data-i18n="heroDesc">An advanced agent-based legal assistant featuring multi-step retrieval and orchestration over live judicial databases. Specialized LLMs cooperate to generate fully verifiable, referenced answers in seconds.</p>
                 <a href="#video-demo" class="btn" data-i18n="heroBtn">Watch Demo</a>
             </div>
         </section>
@@ -49,7 +49,6 @@
 
                 <div class="team-grid">
                     <div class="team-member">
-                        <img src="https://github.com/user-attachments/assets/22b02b87-7695-470e-a97f-b36bc2024b99" alt="Yusuf Demir" class="team-avatar" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
                         <h3>Yusuf Demir</h3>
                         <p>AI Engineer</p>
                         <div class="social-links">
@@ -58,7 +57,6 @@
                         </div>
                     </div>
                     <div class="team-member">
-                        <img src="https://github.com/user-attachments/assets/8e4fc31c-9acd-4560-91ac-8285ad5150d4" alt="Oktay Kaplan" class="team-avatar" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
                         <h3>Oktay Kaplan</h3>
                         <p>Backend / Frontend Engineer</p>
                         <div class="social-links">
@@ -67,7 +65,6 @@
                         </div>
                     </div>
                     <div class="team-member">
-                        <img src="https://github.com/user-attachments/assets/b019dbc5-6d07-4aff-b1a6-5ed045c46fc5" alt="Kutluhan Uzunsoy" class="team-avatar" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
                         <h3>Kutluhan Uzunsoy</h3>
                         <p>Backend / Frontend Engineer</p>
                         <div class="social-links">
@@ -84,19 +81,34 @@
                 <h2 data-i18n="featuresTitle">Highlighted Features</h2>
                 <div class="features-grid">
                     <div class="feature-card">
-                        <i class="fas fa-search"></i>
-                        <h3 data-i18n="f1Title">Semantic Search</h3>
-                        <p data-i18n="f1Desc">Finds decisions and legislation based on the meaning (vector search) of the legal problem, not just keywords.</p>
+                        <i class="fas fa-sitemap"></i>
+                        <h3 data-i18n="f1Title">Schema-Constrained Query Planning</h3>
+                        <p data-i18n="f1Desc">Forces the planner LLM output into a strict JSON schema via forced tool-use, preventing fabricated legal references and ensuring traceable routing.</p>
                     </div>
                     <div class="feature-card">
-                        <i class="fas fa-brain"></i>
-                        <h3 data-i18n="f2Title">RAG-Powered Answers</h3>
-                        <p data-i18n="f2Desc">Bases answers on real legal texts in the database to prevent LLM hallucinations.</p>
+                        <i class="fas fa-balance-scale"></i>
+                        <h3 data-i18n="f2Title">Chamber-Aware Retrieval</h3>
+                        <p data-i18n="f2Desc">Maintains a topic-to-chamber mapping to route queries to the correct specialized court APIs, eliminating unrelated decisions.</p>
                     </div>
                     <div class="feature-card">
-                        <i class="fas fa-layer-group"></i>
-                        <h3 data-i18n="f3Title">Microservice Architecture</h3>
-                        <p data-i18n="f3Desc">Highly scalable and modern infrastructure with React, Java Spring Boot, and Python (FastAPI + LangChain) services.</p>
+                        <i class="fas fa-sort-amount-up"></i>
+                        <h3 data-i18n="f3Title">Domain-Specific Reranking</h3>
+                        <p data-i18n="f3Desc">Reranks raw keyword search results by semantic similarity and applies score boosts to matching chambers for highly relevant precedents.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-gavel"></i>
+                        <h3 data-i18n="f4Title">Independent Answer Judge</h3>
+                        <p data-i18n="f4Desc">Uses a separate, lightweight LLM to evaluate generated answers independently, automatically triggering broader searches if answers fall short.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-file-contract"></i>
+                        <h3 data-i18n="f5Title">In-App Source Viewers</h3>
+                        <p data-i18n="f5Desc">Fetches source documents server-side and renders them in-app, providing distinct, verifiable URLs for each citation linking to official portals.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-book"></i>
+                        <h3 data-i18n="f6Title">Article-Level Statute Matching</h3>
+                        <p data-i18n="f6Desc">Downloads full statute texts and extracts specifically relevant articles with a keyword matcher rather than citing an entire law.</p>
                     </div>
                 </div>
             </div>
@@ -133,19 +145,25 @@
                 navFeatures: "Features",
                 navDemo: "Watch Demo",
                 heroTitle: "AI Revolution in Law",
-                heroDesc: "A RAG-based smart legal assistant working on Supreme Court decisions, legislation, and case law. Generates referenced, reliable answers for lawyers in seconds.",
+                heroDesc: "An advanced agent-based legal assistant featuring multi-step retrieval and orchestration over live judicial databases. Specialized LLMs cooperate to generate fully verifiable, referenced answers in seconds.",
                 heroBtn: "Watch Demo",
                 teamTitle: "Our Development Team",
                 advisorTitle: "Project Advisor",
                 advisorUni: "Hacettepe University / Computer Engineering",
                 photo: "[PHOTO]",
                 featuresTitle: "Highlighted Features",
-                f1Title: "Semantic Search",
-                f1Desc: "Finds decisions and legislation based on the meaning (vector search) of the legal problem, not just keywords.",
-                f2Title: "RAG-Powered Answers",
-                f2Desc: "Bases answers on real legal texts in the database to prevent LLM hallucinations.",
-                f3Title: "Microservice Architecture",
-                f3Desc: "Highly scalable and modern infrastructure with React, Java Spring Boot, and Python (FastAPI + LangChain) services.",
+                f1Title: "Schema-Constrained Query Planning",
+                f1Desc: "Forces the planner LLM output into a strict JSON schema via forced tool-use, preventing fabricated legal references and ensuring traceable routing.",
+                f2Title: "Chamber-Aware Retrieval",
+                f2Desc: "Maintains a topic-to-chamber mapping to route queries to the correct specialized court APIs, eliminating unrelated decisions.",
+                f3Title: "Domain-Specific Reranking",
+                f3Desc: "Reranks raw keyword search results by semantic similarity and applies score boosts to matching chambers for highly relevant precedents.",
+                f4Title: "Independent Answer Judge",
+                f4Desc: "Uses a separate, lightweight LLM to evaluate generated answers independently, automatically triggering broader searches if answers fall short.",
+                f5Title: "In-App Source Viewers",
+                f5Desc: "Fetches source documents server-side and renders them in-app, providing distinct, verifiable URLs for each citation linking to official portals.",
+                f6Title: "Article-Level Statute Matching",
+                f6Desc: "Downloads full statute texts and extracts specifically relevant articles with a keyword matcher rather than citing an entire law.",
                 demoTitle: "Screenshots & Demo",
                 s1Holder: "[SCREENSHOT 1]",
                 s1Text: "TEMIS User Interface",
@@ -159,19 +177,25 @@
                 navFeatures: "Özellikler",
                 navDemo: "Demo İzle",
                 heroTitle: "Hukukta Yapay Zeka Devrimi",
-                heroDesc: "Yargıtay kararları, mevzuatlar ve içtihatlar üzerinde çalışan, RAG tabanlı akıllı hukuk asistanı. Avukatlar için saniyeler içinde referanslı, güvenilir yanıtlar üretir.",
+                heroDesc: "Canlı yargı veritabanları üzerinde çok adımlı arama ve orkestrasyon yeteneğine sahip, ajan (agent) tabanlı akıllı hukuk asistanı. Uzman LLM'lerin işbirliğiyle saniyeler içinde doğrulanabilir ve referanslı yanıtlar üretir.",
                 heroBtn: "Demoyu İzle",
                 teamTitle: "Geliştirici Ekibimiz",
                 advisorTitle: "Proje Danışmanı",
                 advisorUni: "Hacettepe Üniversitesi / Bilgisayar Mühendisliği",
                 photo: "[FOTO]",
                 featuresTitle: "Öne Çıkan Özellikler",
-                f1Title: "Semantik Arama",
-                f1Desc: "Anahtar kelimelere değil, cümlenin ve hukuki problemin anlamına (vektörel arama) göre kararları ve mevzuatları bulur.",
-                f2Title: "RAG Destekli Yanıtlar",
-                f2Desc: "LLM'in halüsinasyon görmesini engellemek için, cevaplarını her zaman veritabanındaki gerçek hukuki metinlere dayandırır.",
-                f3Title: "Mikroservis Mimarisi",
-                f3Desc: "React, Java Spring Boot ve Python (FastAPI + LangChain) servisleriyle yüksek ölçeklenebilir ve modern altyapı.",
+                f1Title: "Şema Kısıtlamalı Sorgu Planlama",
+                f1Desc: "Planlayıcı LLM çıktısını zorunlu araç kullanımıyla (tool-use) katı bir JSON şemasına hapseder, uydurma hukuki referansları engeller ve izlenebilir yönlendirme sağlar.",
+                f2Title: "Daireye Özgü Arama",
+                f2Desc: "Soruya uygun konu-daire eşleştirmesi yaparak sorguları ilgili uzman mahkeme API'lerine yönlendirir, alakasız kararların sonuçları kirletmesini önler.",
+                f3Title: "Alana Özgü Yeniden Sıralama",
+                f3Desc: "Ham anahtar kelime arama sonuçlarını semantik benzerliğe göre yeniden sıralar ve doğru daireden gelen kararların puanını artırarak en ilgili içtihatları öne çıkarır.",
+                f4Title: "Bağımsız Yanıt Değerlendirici",
+                f4Desc: "Üretilen yanıtları bağımsız olarak değerlendiren hafif bir LLM kullanır, yanıt yetersiz kaldığında aramayı otomatik olarak genişleterek yeniden sentezlemeyi tetikler.",
+                f5Title: "Uygulama İçi Kaynak Görüntüleyici",
+                f5Desc: "Kaynak belgeleri sunucu tarafında çekip uygulama içinde oluşturur, resmi portallara bağlanan her alıntı için benzersiz, doğrulanabilir URL'ler sunar.",
+                f6Title: "Madde Bazında Mevzuat Eşleştirme",
+                f6Desc: "Mevzuat metninin tamamını indirir ve kanunun tümünü kaynak göstermek yerine, anahtar kelime eşleştirici ile sadece ilgili maddeleri çıkarır.",
                 demoTitle: "Ekran Görüntüleri & Demo",
                 s1Holder: "[EKRAN GÖRÜNTÜSÜ 1]",
                 s1Text: "TEMIS Kullanıcı Arayüzü",
