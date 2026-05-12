@@ -50,6 +50,17 @@ nav {
     align-items: center;
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-utils {
+    display: flex;
+    align-items: center;
+}
+
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: 24px;
@@ -423,35 +434,43 @@ footer {
 
 /* Responsive Utilities */
 @media (max-width: 768px) {
-    nav > div {
-        flex-direction: column;
-        width: 100%;
-        gap: 16px;
+    nav {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12px 0;
+        align-items: center;
+        justify-content: space-between;
     }
 
-    nav {
-        flex-direction: column;
-        gap: 16px;
+    .nav-right {
+        display: contents;
     }
-    
+
+    .nav-utils {
+        grid-column: 2;
+        grid-row: 1;
+        gap: 12px;
+    }
+
     .nav-links {
-        gap: 20px;
-        flex-wrap: wrap;
+        grid-column: 1 / -1;
+        grid-row: 2;
         justify-content: center;
+        gap: 16px;
+        border-top: 1px solid var(--border-color);
+        padding-top: 12px;
+        width: 100%;
     }
 
     .lang-switch {
         margin-left: 0;
         padding-left: 0;
         border-left: none;
-        border-top: 1px solid var(--border-color);
-        padding-top: 16px;
-        width: 100%;
-        justify-content: center;
     }
 
     .nav-app-link {
         margin-left: 0;
+        font-size: 14px;
     }
 
     .hero {
