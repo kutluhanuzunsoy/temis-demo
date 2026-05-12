@@ -61,6 +61,15 @@ nav {
     align-items: center;
 }
 
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: 24px;
@@ -435,30 +444,50 @@ footer {
 /* Responsive Utilities */
 @media (max-width: 768px) {
     nav {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 12px 0;
-        align-items: center;
+        display: flex;
         justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
     }
 
     .nav-right {
-        display: contents;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        padding: 24px;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+        gap: 24px;
+        transform: translateY(-15px);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        z-index: 99;
+    }
+
+    .nav-right.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
     }
 
     .nav-utils {
-        grid-column: 2;
-        grid-row: 1;
-        gap: 12px;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
     }
 
     .nav-links {
-        grid-column: 1 / -1;
-        grid-row: 2;
-        justify-content: center;
-        gap: 16px;
-        border-top: 1px solid var(--border-color);
-        padding-top: 12px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
         width: 100%;
     }
 
@@ -466,14 +495,18 @@ footer {
         margin-left: 0;
         padding-left: 0;
         border-left: none;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 16px;
+        width: 100%;
+        justify-content: center;
     }
 
     .nav-app-link {
         margin-left: 0;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .hero {
-        padding: 60px 0 40px;
+        padding: 40px 0;
     }
 }

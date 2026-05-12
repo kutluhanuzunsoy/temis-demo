@@ -12,7 +12,10 @@
         <div class="container">
             <nav>
                 <a href="#" class="logo">TEMIS</a>
-                <div class="nav-right">
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-right" id="nav-menu">
                     <ul class="nav-links">
                         <li><a href="#team" data-i18n="navTeam">Team</a></li>
                         <li><a href="#features" data-i18n="navFeatures">Features</a></li>
@@ -244,9 +247,30 @@
             localStorage.setItem('temis_lang', lang);
         }
 
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+            const icon = document.querySelector('.mobile-menu-toggle i');
+            if (menu.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const savedLang = localStorage.getItem('temis_lang') || 'en';
             changeLanguage(savedLang);
+
+            // Close mobile menu when a nav link is clicked
+            document.querySelectorAll('.nav-links a, .nav-app-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    const menu = document.getElementById('nav-menu');
+                    if (menu.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                });
+            });
         });
     </script>
 </body>
